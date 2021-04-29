@@ -1,0 +1,18 @@
+extends layout
+
+block content
+  h1= title
+  h3 Music Database
+  br
+  - for(var j=0; j<music.length; j++)
+      if(j==0 || j%3==0)
+        .row
+          -for(var i=j; i<(3+j); i++)
+            -if(i>=music.length) break;
+              .col-md-4
+                a(href=`/details/${music[i]._id}`)
+                  .container
+                    img(src=`${music[i].albumName.img}` width='100px' height='150px')
+                    .list-title #{music[i].title}
+        br
+      

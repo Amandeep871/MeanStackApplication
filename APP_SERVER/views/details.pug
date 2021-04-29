@@ -1,0 +1,15 @@
+extends layout
+
+block content
+    .row
+        .col-lg-8
+            .title Title: #{music.title} 
+            .genre Genre Type: #{music.genre}
+            p Album Name : #{music.albumName.name}
+            p Artist Name: #{music.artistName}
+            p Release Date: #{music.releaseDate}
+         
+            
+            br
+        .col-lg-4
+            img(src=`${music.albumName.img}` width='250px' height='350px')

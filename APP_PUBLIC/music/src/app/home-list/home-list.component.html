@@ -1,0 +1,28 @@
+<div class="container">
+    <h1></h1>
+    <div class="card">
+        <h5 class="card-header">Music Albums<div class="card-body">
+                
+                <p class="card-text"> </p>               
+                    <table class="table">
+                        <thead>
+                            <tr>
+                                <th>Album List</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            
+                        </tbody>
+                    </table>
+                    <ul *ngFor = "let m of musics">
+                        <li class="list-item">
+                            <td><a routerLink="/music/{{m._id}}"> {{m.title}} </a></td><br>
+                            <a routerLink="/update/{{m._id}}">Update</a> &nbsp;&nbsp;
+                            <td (click)="deleteMusic(m._id)"><a>Delete</a></td>
+                        </li>
+                    </ul>
+                <p></p>
+            </div>
+        </h5>
+    </div>
+</div>

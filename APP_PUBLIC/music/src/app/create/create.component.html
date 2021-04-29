@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+  
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-sm bg-primary navbar-dark fixed-top"><a class="navbar-brand" href="/ ">MusicPoint</a>
+     
+      <div class="collapse navbar-collapse" id="navbarMain">
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item"><a class="nav-link" href="/about/">About</a></li><br>
+          <li class="nav-item"><a class="nav-link" href="/home-list/">List</a></li><br>
+          <li class="nav-item"><a class="nav-link" href="/create/">Create</a></li>
+        </ul>
+      </div>
+    </nav>
+    <div class="container">
+      <div class="body-content">
+        <h4>Create A Music</h4><br>
+        <form (ngSubmit)="createNewMusic(newMusic)" class="form-horizontal" action="" method="post" role="form">
+          <div class="form-group">
+            <input [(ngModel)]="newMusic.title" class="form-control" id="title" type="text" name="title" placeholder="Title">
+          </div>
+          <div class="form-group">
+            <input [(ngModel)]="newMusic.genre" class="form-control" id="genre" type="text" name="genre" placeholder="Genre">
+          </div>
+          <div class="form-group">
+            <input [(ngModel)]="newMusic.artistName" class="form-control" id="artistName" type="text" name="artistName" placeholder="ArtistName">
+          </div><br>
+          <div  class="form-group">
+            <label for="albumName">Album</label>
+            <div class="row">
+              <div class="col">
+                <input [(ngModel)]="newMusic.albumName.name"class="form-control" id="albumName" type="text" name="albumName" placeholder="Name">
+              </div>
+              <div class="col">
+                <input [(ngModel)]="newMusic.albumName.img" class="form-control" id="albumName" type="text" name="albumPicture" placeholder="Picture">
+              </div>
+            </div>
+          </div><br>
+          <div class="form-group">
+            <label for="release-date">Release Date:</label>
+            <input [(ngModel)]="newMusic.releaseDate" class="form-control" id="release-date" type="date" name="releaseDate" placeholder="Release Date">
+          </div><br><br>
+          <button class="btn btn-primary" type="submit">Create Music</button>
+        </form>
+      </div>
+     
+    </div>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js"></script>
+    <script src="/javascripts/bootstrap.min.js"></script>
+  </body>
+</html>
